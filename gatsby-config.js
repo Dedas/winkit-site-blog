@@ -1,14 +1,25 @@
+const config = require('./src/data/config')
+const dotenv = require('dotenv')
+
+if(process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
+
+//require('dotenv').config({
+//  path: `.env.${process.env.NODE_ENV}`,
+//})
+
 module.exports = {
   siteMetadata: {
-    title: `Winkit Blog`,
+    title: config.title,
     author: {
-      name: `Andreas Winkler`,
-      summary: `System developer`,
+      name: config.author.name,
+      summary: config.author.summary,
     },
-    description: `Winkit private blog`,
-    siteUrl: `https://blog.winkit.se`,
+    description: config.description,
+    siteUrl: config.siteUrl,
     social: {
-      twitter: `https://twitter.com/Dedasenen`,
+      twitter: config.social.twitter,
     },
   },
   plugins: [
@@ -53,20 +64,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: config.googleAnalyticsID,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: config.title,
+        short_name: config.shortName,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
+        icon: config.icon,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -79,5 +90,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: config.contentfulSpaceId,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }

@@ -1,0 +1,8 @@
+{
+	"build": {
+		"env": {
+			"GATSBY_PORTFOLIO_GITHUB_TOKEN": "@gatsby_portfolio_github_token",
+			"CONTENTFUL_ACCESS_TOKEN": "@contentful_access_token"
+		}
+	}
+}
