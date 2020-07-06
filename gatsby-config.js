@@ -15,6 +15,7 @@ module.exports = {
     author: {
       name: config.author.name,
       summary: config.author.summary,
+      avatar: config.author.avatar,
     },
     description: config.description,
     siteUrl: config.siteUrl,
@@ -26,15 +27,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/static`,
+        name: `static`,
       },
     },
     {

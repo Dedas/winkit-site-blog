@@ -4,7 +4,8 @@ module.exports = {
   icon: './static/favicon.png',
   author: {
     name: 'Andreas Winkler',
-    summary: 'System developer'
+    summary: 'System developer',
+    avatar: './static/profile-pic.jpg'
   },
   siteUrl: 'https://blog.winkit.se',
   description: 'System science student',
