@@ -61,7 +61,6 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
