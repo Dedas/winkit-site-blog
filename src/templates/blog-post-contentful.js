@@ -97,6 +97,7 @@ export const pageQuery = graphql`
       subtitle
       author
       date
+      #TODO Invalid query / changes in rich-text-react-renderer?
       childContentfulPostContentRichTextNode {
         json
       }
