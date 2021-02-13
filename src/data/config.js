@@ -25,16 +25,16 @@ module.exports = {
     twitter: '@dedasenen',
   },
   address: {
-    city: 'Lund',
-    region: 'Skåne',
+    city: 'Göteborg',
+    region: 'VG',
     country: 'Sweden',
-    zipCode: '22643',
+    zipCode: '417 13',
   },
   contact: {
     email: 'andreas.winkler@winkit.se',
     phone: '+46707229491',
   },
-  foundingDate: '2020',
+  foundingDate: '2021',
   contentfulSpaceId: 'qqg8xpr0nyrn'
 }
 
