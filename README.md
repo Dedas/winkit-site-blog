@@ -1,3 +1,3 @@
 ## Winkit Blog
 
-Add stuff...
+A ReactJS blog project making use of GraphQL and Contentful.
